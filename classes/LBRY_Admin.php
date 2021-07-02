@@ -62,15 +62,23 @@ class LBRY_Admin
 
         add_settings_field(
             LBRY_SPEECH,
-            'Spee.ch URL',
+            'CDN URL',
             array( $this, 'speech_callback' ),
+            LBRY_ADMIN_PAGE,
+            LBRY_SETTINGS_SECTION_GENERAL
+        );
+        
+        add_settings_field(
+            LBRY_IP,
+            'LBRY SDK IP',
+            array( $this, 'wallet_ip' ),
             LBRY_ADMIN_PAGE,
             LBRY_SETTINGS_SECTION_GENERAL
         );
 
         add_settings_field(
             LBRY_SPEECH_CHANNEL,
-            'Spee.ch Channel',
+            'LBRY Channel',
             array( $this, 'speech_channel_callback' ),
             LBRY_ADMIN_PAGE,
             LBRY_SETTINGS_SECTION_GENERAL
@@ -78,7 +86,7 @@ class LBRY_Admin
 
         add_settings_field(
             LBRY_SPEECH_PW,
-            'Spee.ch Password',
+            'LBRY Password',
             array( $this, 'speech_pw_callback' ),
             LBRY_ADMIN_PAGE,
             LBRY_SETTINGS_SECTION_GENERAL
